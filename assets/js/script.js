@@ -10,10 +10,10 @@ var elForm = document.querySelector("#initials")
 var Eltimer = document.querySelector("#timer")
 Eltimer.innerHTML = timer;
 var qbox = document.querySelector("#question")
-var changebutton = document.querySelector("#start")
+var startbutton = document.querySelector("#start")
 var tscore = document.querySelector("#thisrun")
-var user = document.querySelector("user")
-var sbmtButton = document.querySelector("submit-user")
+var user = document.querySelector("#user")
+var sbmtButton = document.querySelector("#submit-user")
 
 const quiz = {
     0: {
@@ -48,10 +48,6 @@ const quiz = {
     }
 }
 
-user.addEventListener("keydown",()=>{
-    saveScoreBtn.disabled = !user.value;
-})
-
 const bodies = {
     0: document.querySelector("body1"),
     1: document.querySelector("body2"),
@@ -64,31 +60,25 @@ const abxs = {
     D: document.querySelector("#D")
 }
 
-function checkInitials(){
-    if(elForm.value.length===0){
-
-    }
-}
-
 function startQuiz() {
     bodies[0].classList.add("hidden")
     bodies[1].classList.remove("hidden")
     qnum = 0;
     let wrongs=[];
 
-    function scores(){
-        function get(){
-            var scores = JSON.parse(localStorage.getItem("scores")) || [];
-            return scores
-        }
-        function set(ini,score){
-            scores = get()
-            scores.push([ini,score])
-            localStorage.setItem("scores",Json.stringify(scores))
-        }
+    // function scores(){
+    //     function get(){
+    //         var scores = JSON.parse(localStorage.getItem("scores")) || [];
+    //         return scores
+    //     }
+    //     function set(ini,score){
+    //         scores = get()
+    //         scores.push([ini,score])
+    //         localStorage.setItem("scores",Json.stringify(scores))
+    //     }
 
         
-    }
+    
     function startTime() {
         var timerInterval = setInterval(function () {
             timer--;
@@ -108,14 +98,12 @@ function startQuiz() {
             qnum++;
             window.setTimeout(change, 1000)
             setTimeout(function(){event.target.style.background = "#373F51"},1000)
-            
         }else {
             event.target.style.background = "red"
             wrongs.push(event.target.id)
             sounds.incorrect.play()
             timer -= 5;
             Eltimer.innerHTML = timer;
-
         }
     }
     function change() {
@@ -149,8 +137,8 @@ function startQuiz() {
     abxs.D.addEventListener("dblclick", check)
     change();
     startTime();
+
 }
 
-
-elForm.addEventListener("change",checkInitials)
-sbmtButton.addEventListener("click", startQuiz);
+// elForm.addEventListener("change",checkInitials)
+startbutton.addEventListener("click", startQuiz);
