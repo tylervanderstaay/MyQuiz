@@ -1,0 +1,125 @@
+:root{
+    --c1:#D8DBE2;
+    --c2:#A9BCD0;
+    --c3:#58A4B0;
+    --c4:#373F51;
+    --c5:#1B1B1E;
+}
+#container{
+    background:var(--c5);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-items:center;
+    gap: 3%;
+}
+body1{
+    position:fixed;
+    height:100%;
+    width:100%;
+    visibility:visible;
+}
+body1 h1{
+    margin-top:50px;
+    font-size:40px;
+    color:var(--c3)
+}
+label{
+    color:var(--c3);
+    height:15px;
+}
+
+#initials{
+    width:50px;
+}
+
+body2{
+    position:fixed;
+    height:100%;
+    width:100%;
+}
+#q-container{
+    color:var(--c2);
+    margin-top:10px;
+    border-top-left-radius:20px;
+    border-bottom-right-radius:20px;
+    width:65%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:5px solid;
+}
+ques{
+    width:100%;
+    height:20%;
+}
+ques h1{
+    margin-left:20px;
+    width:90%;
+    font-size: 125%;
+    text-align:left;
+}
+/* TIMER CSS */
+/* TIMER CSS */
+/* TIMER CSS */
+.timerbox{
+    display:flex;
+    flex-direction:row;
+    width:15%;
+    height:90%;
+    border-right: 2px solid;
+    align-items:center;
+    justify-content:center;
+}
+#timer{
+    text-align:center;
+    font-size:60px;
+}
+/* TIMER CSS */
+/* TIMER CSS */
+/* TIMER CSS */
+#cleanlist{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+ans p{
+    font-size:25px;
+    width:fit-content;
+    height:fit-content;
+}
+
+#answers-container{
+    display:flex;
+    width:60%;
+    height:60%;
+    justify-content:center;
+    align-content:center;
+}
+#aline{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    height:50%;
+}
+.answer{
+    color:var(--c2);
+    border-radius:25px;
+    display:flex;
+    background:var(--c4);
+    width:100%;
+    height:100%;
+    align-items:center;
+    justify-content:center;  
+}
+.answer:hover{
+    color:var(--c5);
+    background-color:var(--c3);
+}
+.hidden{
+    display:none;
+}

@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>REPLACE TITLE</title>
+    <link rel='stylesheet' href='./assets/css/reset.css' />
+    <link rel='stylesheet' href='./assets/css/style.css' />
+</head>
+
+<body>
+    <header>
+        <span></span>
+    </header>
+    <body1>
+        <main>
+            <div id="container">
+                <h1>Would you like to take a quiz?</h1>
+                <span>
+                    <label>Initials (###):</label>
+                    <input type="text" id="initials" name="user" />
+                    <input type="submit" id="submit-user" />
+                </span>
+                <button class="button" id="start">Begin Quiz</button>
+            </div>
+        </main>
+    </body1>
+
+    <body2 class="hidden">
+        <main>
+            <div id="container">
+                <ques id="q-container">
+                    <span class="timerbox">
+                        <p id="timer"></p>
+                    </span>
+                    <h1 id="question"></h1>
+                </ques>
+                <div id="answers-container">
+                    <div id="cleanlist">
+                        <span id="aline">
+                            <ans class="answer" id="A">
+                                <p>A</p>
+                            </ans>
+                            <ans class="answer" id="B">
+                                <p>B</p>
+                            </ans>
+                        </span>
+                        <span id="aline">
+                            <ans class="answer" id="C">
+                                <p>C</p>
+                            </ans>
+                            <ans class="answer" id="D">
+                                <p>D</p>
+                            </ans>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body2>
+
+    <body3 class="hidden">
+        <main>
+            <div id="container">
+                <h1 id="thisrun">test</h1>
+            </div>
+        </main>
+    </body3>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
